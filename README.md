@@ -1,5 +1,3 @@
-__You can find more detailed instructions and the demo project [Here](https://github.com/nbhung100914/excel-to-unity-example)__
-
 # 1. Introduction
 
 This tool is designed to assist independent game developers by providing a simple way to design and manage databases that can be used by both developers and designers. It allows designers to easily modify game statistics without needing developer assistance.
@@ -7,6 +5,8 @@ This tool is designed to assist independent game developers by providing a simpl
 Every game project, regardless of size, requires a static database. As the project grows, so does the need for data tables, constants, and IDs. Without an effective management solution, this can become complex. This tool aims to simplify this process by managing IDs and constants, and providing a single location to search, modify, and update these elements along with the data table.
 
 Over time, the tool has evolved to include new data types and leverages the capabilities of Excel for design and management. While it was primarily developed for RPG games, which typically have large static databases, it can also be used for other game genres that require extensive static databases.
+
+__You can find more detailed instructions and the demo project [Here](https://github.com/nbhung100914/excel-to-unity-example)__
 
 # 2. Main functions
 
@@ -56,11 +56,11 @@ This is a comprehensive function, everything will be processed with just one but
   - TRUE: Export _[%Constants]_ sheets to independent C# files with file names structured as _[SheetName] + %Constants.cs_
   - FALSE: Consolidate all _[%Constants]_ sheets from all excel files into one and then export to a single C# file named _Constants.cs_
 - **Separate Localization:**
-  - TRUE: Export _[%Localization%]_ sheets to independent groups, each group includes Localization Data, Component, and API, the file names will have the following structure:
+  - TRUE: Export _[Localization%]_ sheets to independent groups, each group includes Localization Data, Component, and API, the file names will have the following structure:
     - Localization Data: _[SheetName]\_[language].txt_
     - Component: _[SheetName] + Text.cs_
     - API: _[SheetName].cs_
-  - FALSE: Consolidate all _[%Localization%]_ sheets from all excel files into one and then export to a single group, the file names will have the following structure:
+  - FALSE: Consolidate all _[Localization%]_ sheets from all excel files into one and then export to a single group, the file names will have the following structure:
     - Localization Data: _Localization\_ + [language].txt_
     - Component: _LocalizationText.cs_
     - API: _Localization.cs_
@@ -168,7 +168,7 @@ Sheets named according to the syntax _[%Constants]_ are called Constants Sheets.
 | hero_name    | HERO_2     | hero name 2               | nombre del héroe 2             |
 | hero_name    | HERO_3     | hero name 3               | nombre del héroe 3             |
 
-Sheets named according to the syntax _[%Localization%]_ are called Localization Sheets. The design rules are as follows:
+Sheets named according to the syntax _[Localization%]_ are called Localization Sheets. The design rules are as follows:
 
 - The sheet name needs to have `Localization` as a prefix or suffix.
 - This sheet has a structure of 2 key columns, one is the main key `idString` and one is the additional key `relativeId`.
